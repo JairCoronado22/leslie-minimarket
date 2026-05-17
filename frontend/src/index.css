@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-leslie-50: #f0fdf4;
+  --color-leslie-100: #dcfce7;
+  --color-leslie-200: #bbf7d0;
+  --color-leslie-300: #86efac;
+  --color-leslie-400: #4ade80;
+  --color-leslie-500: #22c55e;
+  --color-leslie-600: #16a34a;
+  --color-leslie-700: #15803d;
+  --color-leslie-800: #166534;
+  --color-leslie-900: #14532d;
+  --color-leslie-950: #052e16;
+
+  --font-display: 'Sora', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+
+  --animate-fade-in: fadeIn 0.3s ease-out;
+  --animate-slide-up: slideUp 0.3s ease-out;
+  --animate-scale-in: scaleIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@layer base {
+  body {
+    background-color: #f9fafb;
+    color: #111827;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #16a34a transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar { width: 4px; }
+  .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #16a34a;
+    border-radius: 20px;
+  }
+}
